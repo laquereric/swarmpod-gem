@@ -1,0 +1,31 @@
+# frozen_string_literal: true
+
+require "swarmpod_gem"
+
+SwarmpodGem.configure do |config|
+  # Path to the Swarmpodfile that defines agent gem groups.
+  # Defaults to Rails.root.join("Swarmpodfile") when running inside a host app.
+  # config.gemfile_path = Rails.root.join("Swarmpodfile").to_s
+
+  # Directory containing agent prompt markdown files.
+  # Defaults to the gem's built-in prompts when not set.
+  # config.prompts_dir = Rails.root.join("prompts").to_s
+
+  # Working directories (defaults are under tmp/swarmpod/).
+  # config.workspace = Rails.root.join("tmp", "swarmpod", "workspace").to_s
+  # config.output    = Rails.root.join("tmp", "swarmpod", "output").to_s
+  # config.gems_dir  = Rails.root.join("tmp", "swarmpod", "gems").to_s
+
+  # Automatically boot the orchestrator when the app starts.
+  # Set to false to manually control when agents spawn.
+  # config.auto_boot = true
+
+  # Git clone timeout in seconds.
+  # config.clone_timeout = 60
+
+  # Maximum events kept in the state buffer.
+  # config.max_events = 50
+
+  # Debounce interval for ActionCable broadcasts (milliseconds).
+  # config.debounce_ms = 100
+end

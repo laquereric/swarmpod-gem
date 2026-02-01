@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="swarmpod-mount" content="<%= SwarmpodGem::Engine.routes.find_script_name({}) %>">
+  <title>SwarmPod Dashboard</title>
+  <%= stylesheet_link_tag "swarmpod_gem/application", media: "all" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <%= yield %>
+  <%= javascript_include_tag "actioncable" %>
+  <%= javascript_include_tag "swarmpod_gem/application" %>
+</body>
+</html>

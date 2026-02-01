@@ -1,0 +1,23 @@
+services:
+  swarmpod:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    ports:
+      - "4000:4000"
+    volumes:
+      - ../../:/workspace:ro
+      - output:/output
+      - gems:/gems
+    environment:
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+      - WORKSPACE=/workspace
+      - OUTPUT=/output
+      - GEMS_DIR=/gems
+      - RAILS_ENV=production
+      - SECRET_KEY_BASE=swarmpod-dev-secret-key-base-not-for-production
+    restart: "no"
+
+volumes:
+  output:
+  gems:

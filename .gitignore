@@ -1,0 +1,20 @@
+# Secrets and credentials
+secrets/
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.pfx
+credentials.yml
+master.key
+
+# Ruby / Bundler
+*.gem
+.bundle/
+vendor/bundle/
+pkg/
+
+# OS files
+.DS_Store
+Thumbs.db

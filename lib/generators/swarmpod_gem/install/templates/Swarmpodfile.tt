@@ -1,0 +1,20 @@
+# Swarmpodfile — Agent gem groups for SwarmPod orchestration.
+#
+# Each group defines a set of gems that a Claude agent will analyze.
+# The group name becomes the agent tab in the dashboard.
+#
+# Usage:
+#   group :name do
+#     gem "gem-name", git: "https://github.com/user/repo.git"
+#     gem "another-gem", path: "../local-gem"
+#   end
+
+source "https://rubygems.org"
+
+group :web do
+  # gem "your-web-gem", git: "https://github.com/user/web-gem.git"
+end
+
+group :experts do
+  # gem "your-experts-gem", git: "https://github.com/user/experts-gem.git"
+end
